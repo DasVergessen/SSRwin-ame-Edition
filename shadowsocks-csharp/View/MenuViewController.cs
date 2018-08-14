@@ -269,16 +269,13 @@ namespace Shadowsocks.View
                 CreateMenuItem("Test network connection", new EventHandler(this.TestNetworkConnection_Click)),
                 new MenuItem("-"),
                 CreateMenuGroup("Help", new MenuItem[] {
-                    CreateMenuItem("Check update", new EventHandler(this.CheckUpdate_Click)),
                     CreateMenuItem("Show logs...", new EventHandler(this.ShowLogItem_Click)),
-                    CreateMenuItem("Open wiki...", new EventHandler(this.OpenWiki_Click)),
-                    CreateMenuItem("Feedback...", new EventHandler(this.FeedbackItem_Click)),
                     new MenuItem("-"),
                     CreateMenuItem("Gen custom QRCode...", new EventHandler(this.showURLFromQRCode)),
                     CreateMenuItem("Reset password...", new EventHandler(this.ResetPasswordItem_Click)),
                     new MenuItem("-"),
+                    CreateMenuItem("Feedback...", new EventHandler(this.FeedbackItem_Click)),
                     CreateMenuItem("About...", new EventHandler(this.AboutItem_Click)),
-                    CreateMenuItem("Donate...", new EventHandler(this.DonateItem_Click)),
                 }),
                 CreateMenuItem("Quit", new EventHandler(this.Quit_Click))
             });
@@ -917,7 +914,7 @@ namespace Shadowsocks.View
 
         private void FeedbackItem_Click(object sender, EventArgs e)
         {
-            Process.Start("https://github.com/Azure99/SsrBackup/issues/new");
+            Process.Start("https://github.com/shirohako/SSRwin-ame-Edition/issues");
         }
 
         private void ResetPasswordItem_Click(object sender, EventArgs e)
@@ -929,12 +926,12 @@ namespace Shadowsocks.View
 
         private void AboutItem_Click(object sender, EventArgs e)
         {
-            Process.Start("https://github.com/Azure99/SsrBackup/blob/master/about.txt");
+            Process.Start("https://github.com/shirohako/SSRwin-ame-Edition");
         }
 
         private void DonateItem_Click(object sender, EventArgs e)
         {
-            ShowBalloonTip(I18N.GetString("Donate"), I18N.GetString("Please contract to breakwa11 to get more infomation"), ToolTipIcon.Info, 10000);
+            ShowBalloonTip(I18N.GetString("Donate"), I18N.GetString("Please contract to ame to get more infomation"), ToolTipIcon.Info, 10000);
         }
 
         [DllImport("user32.dll")]

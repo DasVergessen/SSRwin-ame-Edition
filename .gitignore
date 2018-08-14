@@ -9,5 +9,6 @@ TestResults
 *.suo
 *.user
 *.exe
+.vs/
 
 /templates
